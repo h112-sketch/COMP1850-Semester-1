@@ -5,9 +5,10 @@
 - Extension: show the message length before and after cleaning.
 """
 
-raw_message = input("Type a message to tidy: ")
+raw_message = input("Type a message to tidy: ").strip().title()
 
 # TODO: apply a sequence of string methods to produce a cleaned_message
 # Example methods: strip, title, replace, lower, upper
 # TODO: display the original and cleaned messages
 # Extension: display the character counts for each version
+print(raw_message)

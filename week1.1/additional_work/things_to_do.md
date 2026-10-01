@@ -1,6 +1,6 @@
 # Additional Work
 
-This week, the additional work in the   adv   directory is going to focus on things that anyone who is already familiar with the basics of python can do to practice their programming. We also highlight and link to our module's set-text, _How to Think Like a Computer Scientist_. We also highlight additional work you can be doing in-class...
+This week, the and link to our module's set-text, _How to Think Like a Computer Scientist_. We also highlight additional work you can  additional work in the   adv   directory is going to focus on things that anyone who is already familiar with the basics of python can do to practice their programming. We also highlightbe doing in-class...
 
 ## Adv directory
 
