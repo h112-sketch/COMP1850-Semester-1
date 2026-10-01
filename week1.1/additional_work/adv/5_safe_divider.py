@@ -9,14 +9,11 @@ numerator_input = int(input("Enter the numerator: "))
 denominator_input = int(input("Enter the denominator: "))
 
 # TODO: wrap the risky operations in a try/except block
-while True:
-    try:
-        result = numerator_input / denominator_input
-        print(result)
-        break
-    except Exception as e:
-        print(e)
-        break
+try:
+    result = numerator_input / denominator_input
+    print(result)
+except Exception as e:
+    print(e)
 # TODO: convert the values to integers and perform the division
 # TODO: print clear feedback when something goes wrong
 # TODO: only show the answer when the division succeeds
