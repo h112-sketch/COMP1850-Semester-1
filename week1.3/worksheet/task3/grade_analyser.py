@@ -8,6 +8,48 @@
 
 # read in the data, and for each student calculate their average grade and classification
 
+import csv
+
+filename = input("Enter a filename")
+output_filename  = filename + "_out.csv"
+
+
+
+with open(filename, "r") as file:
+    reader = csv.reader(file)
+    next(reader)
+
+    with open (output_filename, "w") as outputFile:
+            writer = csv.writer(outputFile)
+            for row in reader:
+                studentId = row[0]
+                grades = row[1:]
+                total = 0
+                numberOfGrades = 0
+                for grade in grades:
+                    if grade:
+                        total += int(grade)
+                        numberOfGrades += 1
+
+                average = total / numberOfGrades
+                average = round(average, 2)
+                classification = "F"
+                if average >= 70:
+                    classification = "1"
+                elif average >= 60:
+                    classification = "2:1"
+                elif average >= 50:
+                    classification = "2:2"
+                elif average >= 40:
+                    classification = "3"
+                else:
+                    classification = "F"
+
+            
+                writer.writerow([studentId, f"{average:.2f}", classification])
+
+
+
 
 
 # write out this calculated data in the format without a header:
