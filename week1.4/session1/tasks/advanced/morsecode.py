@@ -31,6 +31,19 @@ def string_to_morse_code(string):
              '.': '.-.-.-', '-': '-....-', '+': '.-.-.',  '"': '.-..-.',
              '?': '..--..', '/': '-..-.'}
 
+    morseCode = ""
+    
+    for char in string:
+        if char in mcode:
+            morseCode += mcode[char]
+        elif char.lower() in mcode:
+            morseCode += mcode[char.lower()]
+        elif char.upper() in mcode:
+            morseCode += mcode[char.upper()]
+        else:
+            print("couldnt find")
+
+    return morseCode
 
 # test data
 

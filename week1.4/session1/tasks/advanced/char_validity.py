@@ -17,6 +17,16 @@ def valid_char_in_string(popList, charSet):
     characters not in charSet, or invalid charSet. Otherwise, returns
     a Boolean True. Examples of valid charSet are ['0', '1'], ['-', '*'].
     """
+    if not isinstance(charSet, list):
+        return False
+    
+    for string in popList:
+        for eachChar in string:
+            if eachChar not in charSet:
+                return False
+
+    return True 
+
 
 # test data
 

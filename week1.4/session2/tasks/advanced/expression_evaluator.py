@@ -10,6 +10,10 @@
 
 
 def evaluate_expression(expression, x=0, y=0, **kwargs):
+    variables = {'x': x, 'y': y}
+    variables.update(kwargs)
+
+    return eval(expression, {"__builtins__": {}}, variables)
     """
     Evaluates a mathematical expression with arbitrary variables.
     - expression: A string representing the mathematical expression.
