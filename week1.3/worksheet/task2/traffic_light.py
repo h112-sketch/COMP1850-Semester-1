@@ -12,7 +12,7 @@ maxtime = int(input("How many steps to simulate?"))  # read an integer number of
 state = "red"
 stepsOnState = 0
 
-for steps in range(1, maxtime + 1):
+for steps in range(maxtime + 1):
     if state == "red" and stepsOnState == states["red"]:
         stepsOnState = 0
         state = "red_amber"

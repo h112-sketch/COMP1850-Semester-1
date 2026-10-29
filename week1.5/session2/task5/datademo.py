@@ -1,7 +1,12 @@
-# Week 1.5, Session 2: Task 5
+from data import Dataset
 
-# Write a program here to create a Dataset containing data
-# from a file named by the user
+filename = input("Enter filename: ")
+dataset = Dataset(filename)
 
-# Your program should display dataset size, mean and median,
-# followed by the individual values (using a for loop)
+print("Size:", len(dataset))
+print("Mean:", dataset.mean())
+print("Median:", dataset.median())
+
+print("Values:")
+for value in dataset:
+    print(value)
